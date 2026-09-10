@@ -1,0 +1,39 @@
+﻿IMPORT_DATA.PY STARTED
+backend\venv\Scripts\python.exe : INFO:backend.db:Using mock database for 
+Phase 1 testing
+At line:1 char:48
++ ... analysis" ; backend\venv\Scripts\python.exe scripts/import_data.py 2> ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO:backend.db...Phase 1 testing 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO:backend.db:Using mock database: retail_analytics
+INFO:backend.db:Inserted 100 mock transactions
+INFO:backend.db:Inserted 5 mock products
+INFO:backend.db:Inserted 3 mock customers
+INFO:__main__:============================================================
+INFO:__main__:Starting data import...
+INFO:__main__:============================================================
+INFO:__main__:Importing transactions from sales_cleaned.csv...
+INFO:__main__:[OK] Imported 392692 transaction records
+INFO:__main__:Importing products from product_summary.csv...
+INFO:__main__:[OK] Imported 3922 product records
+INFO:__main__:Importing customers from customer_summary.csv...
+INFO:__main__:[OK] Imported 4338 customer records
+INFO:__main__:Importing daily sales from daily_sales.csv...
+INFO:__main__:[OK] Imported 305 daily sales records
+INFO:__main__:Importing monthly sales from monthly_sales.csv...
+INFO:__main__:[OK] Imported 13 monthly sales records
+INFO:__main__:Importing product daily sales from product_daily_sales.csv...
+INFO:__main__:[OK] Imported 276148 product daily sales records
+INFO:__main__:============================================================
+INFO:__main__:Import completed: 6/6 files imported successfully
+INFO:__main__:============================================================
+Starting data import...
+Loading configuration...
+Creating DataImporter instance...
+[OK] DataImporter created
+Data folder: D:\AFTER GRAD\AITEK\predictive analysis\data
+Starting import process...
+[OK] Import completed successfully!

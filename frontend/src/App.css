@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.main-content {
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 28px;
+}

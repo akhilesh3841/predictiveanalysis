@@ -1,0 +1,234 @@
+.analysis-page {
+  padding: 32px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.analysis-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.analysis-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.bivariate-selectors {
+  display: flex;
+  gap: 14px;
+  min-width: 460px;
+}
+
+.bivariate-selectors > div {
+  flex: 1;
+}
+
+.bivariate-selectors label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.bivariate-selectors select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.analysis-section {
+  margin-bottom: 32px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 0 0 5px;
+  font-size: 21px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.correlation-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.regression-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.metric-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.metric-card span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.metric-card strong {
+  display: block;
+  font-size: 19px;
+}
+
+.relationship-box {
+  margin-top: 16px;
+  padding: 17px 20px;
+  background: #f3f4f6;
+  border-radius: 9px;
+}
+
+.relationship-box span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.relationship-box strong {
+  font-size: 17px;
+}
+
+.analysis-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.06);
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 430px;
+}
+
+.equation-box {
+  margin-top: 18px;
+  background: #f3f4f6;
+  padding: 17px 20px;
+  border-radius: 8px;
+}
+
+.equation-box span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.equation-box strong {
+  font-size: 17px;
+}
+
+.analysis-loading {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+}
+
+.loading-spinner {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #374151;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.analysis-error {
+  padding: 15px 18px;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.analysis-error button {
+  margin-left: auto;
+  border: none;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .correlation-grid,
+  .regression-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .analysis-page {
+    padding: 20px;
+  }
+
+  .analysis-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bivariate-selectors {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .bivariate-selectors {
+    flex-direction: column;
+  }
+
+  .correlation-grid,
+  .regression-grid {
+    grid-template-columns: 1fr;
+  }
+}
