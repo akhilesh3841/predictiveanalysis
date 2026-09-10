@@ -4801,9 +4801,7 @@ if __name__ == "__main__":
 # ============================================================
 
 app = Flask(__name__)
-CORS(app)  # यह आपके Vercel frontend को कनेक्ट करने के लिए ज़रूरी है
 
-# इसके नीचे आपके सारे API Routes (@app.route) होने चाहिए...
+# यह आपके Vercel फ्रंटएंड को बिना किसी CORS या 403 एरर के डेटा ट्रांसफर करने देगा
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
