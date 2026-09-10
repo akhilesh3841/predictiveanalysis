@@ -17,7 +17,7 @@ Sections:
 # IMPORTS
 # ============================================================
 
-from flask import Flask, jsonify, request
+from flask import Flask, app, jsonify, request
 from flask_cors import CORS
 from dotenv import load_dotenv
 
@@ -764,8 +764,7 @@ def create_app(
     # ========================================================
 
     @app.route(
-        "/api/dashboard/kpis",
-        methods=["GET"]
+        '/api/dashboard/kpis', methods=['GET']
     )
     def get_dashboard_kpis():
 
@@ -906,10 +905,8 @@ def create_app(
     # MONTHLY REVENUE
     # ========================================================
 
-    @app.route(
-        "/api/dashboard/monthly-revenue",
-        methods=["GET"]
-    )
+    @app.route('/api/dashboard/monthly-revenue', methods=['GET'])
+
     def get_monthly_revenue():
 
         try:
@@ -1003,10 +1000,8 @@ def create_app(
     # TOP PRODUCTS
     # ========================================================
 
-    @app.route(
-        "/api/dashboard/top-products",
-        methods=["GET"]
-    )
+    @app.route('/api/dashboard/top-products', methods=['GET'])
+
     def get_top_products():
 
         try:
@@ -1138,10 +1133,8 @@ def create_app(
     # TOP COUNTRIES
     # ========================================================
 
-    @app.route(
-        "/api/dashboard/top-countries",
-        methods=["GET"]
-    )
+    @app.route('/api/dashboard/top-countries', methods=['GET'])
+
     def get_top_countries():
 
         try:
@@ -4804,4 +4797,3 @@ app = Flask(__name__)
 
 # यह आपके Vercel फ्रंटएंड को बिना किसी CORS या 403 एरर के डेटा ट्रांसफर करने देगा
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
-
